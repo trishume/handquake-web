@@ -1,3 +1,7 @@
 <h1>Handquake</h1>
 <p>A cool thing by Jim, Tristan, Tony, and Zi Kai</p>
+<% if user_signed_in? %>
+<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+<% else %>
 <%= link_to 'Sign In', new_user_session_path %>
+<% end %>

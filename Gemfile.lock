@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/christian-smith/acts_as_network.git
+  revision: 1a7776bcd300a7893a07c1e608eee6566757c7f5
+  specs:
+    acts_as_network (0.1.0)
+      rails (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -118,6 +125,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_network!
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 2.0)

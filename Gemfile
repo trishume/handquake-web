@@ -39,4 +39,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
+gem 'acts_as_network', :git => "https://github.com/christian-smith/acts_as_network.git"
 
