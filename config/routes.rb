@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   # Example of regular route:
-  get 'api/createevent' => 'api#create_event'
+  get 'api/handshake' => 'api#create_event'
+  get 'api/poll_event' => 'api#poll_event'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
