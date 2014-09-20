@@ -1,7 +1,8 @@
 class ApiController < ApplicationController
   def create_event
     p = event_params
-    user = User.find(p[:user])
+    user = User.find_by(pebble: p[:id])
+    raise "Invalid user" unless user
     event = user.hand_events.create(latitude: p[:lat].to_f, longitude: p[:lon].to_f)
     event.time = DateTime.now
     event.save!
@@ -33,7 +34,7 @@ class ApiController < ApplicationController
 
   private
   def event_params
-    params.permit(:user, :lat, :lon, :dir)
+    params.permit(:id, :lat, :lon, :dir)
   end
   def poll_params
     params.permit(:event)
