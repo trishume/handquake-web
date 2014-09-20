@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
   <title>Handquake</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <header>
+    <div class="header">
+        <div class="col-md-2">
+          <div id="logo"><a href="/">Handquake</a></div>
+        </div>
+        <div class="col-md-4">
+          <%= link_to 'Profile', profile_path %>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+  </header>
+  <div class="container">
+    <% if notice %><div class="alert alert-info" role="alert"><%= notice %></div><% end %>
+    <% if alert %><div class="alert alert-warning" role="alert"><%= alert %></div><% end %>
 
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>

@@ -1,0 +1,77 @@
+$height-input-name: 50px;
+$height-input: 40px;
+$profile-margins: 20px;
+$input-margins: 10px;
+
+form h2 {
+    font-size: 16px;
+    font-weight: bold;
+//    text-transform: uppercase;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    height: $height-input;
+    line-height: $height-input;
+    font-size: 16px;
+}
+
+input.input-pebble-id {
+    height: $height-input-name;
+    line-height: $height-input-name;
+    font-size: 24px;
+}
+
+.form-group {
+    input, button {
+        margin-bottom: $input-margins;
+    }
+}
+
+.group {
+    padding-bottom: 10px;
+}
+
+.control-label {
+    margin-bottom: 0;
+    padding-top: 7px;
+    text-align: right;
+}
+
+#button-add-another {
+    font-weight: bold;
+    color: gray;
+}
+
+#button-sync {
+    font-weight: bold;
+}
+
+.form-buttons {
+    padding-top: 10px;
+}
+
+#profile-pic {
+    width: 100%;
+    max-width: 270px;
+    margin-top: $profile-margins;
+}
+
+#profile-menu-links {
+    margin-top: $profile-margins;
+}

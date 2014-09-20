@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'acts_as_network', :git => "https://github.com/christian-smith/acts_as_network.git"
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap_form'

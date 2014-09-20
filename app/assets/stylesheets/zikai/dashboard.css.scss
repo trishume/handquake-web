@@ -1,0 +1,74 @@
+#pebble-id-change {
+    text-align: right;
+}
+
+#profile-pic {
+    float: right;
+}
+
+#contact-info {
+    font-size: 15px;
+    
+    .name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #e5e5e5;
+        
+    }
+    
+    .col-xs-2 {
+        padding-right: 10px;
+    }
+    
+    .col-xs-10 {
+        padding: 0;
+    }
+}
+
+.key {
+    text-align: right;
+    font-weight: bold;
+}
+
+#edit-profile, .see-profile {
+    float: right;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+#recent-met {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+}
+
+.contact-grid-list .contact {
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    .profile-pic {
+        float:left;
+        margin-right: 10px;
+    }
+    
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 23px;
+    }
+    
+    .value {
+        line-height: 20px;
+    }
+    
+    .value .preferred {
+        font-size: 12px;
+        border-radius: 4px;
+        background-color: #FFD700;
+        color: #49311c;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        padding: 2px 6px;
+        margin: 0 5px;
+    }
+}
