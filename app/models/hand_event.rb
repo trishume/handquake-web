@@ -1,5 +1,5 @@
 class HandEvent < ActiveRecord::Base
-  TIMEOUT = 1.minutes
+  TIMEOUT = 20.seconds
   belongs_to :user
   belongs_to :connection
 
