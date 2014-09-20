@@ -40,6 +40,11 @@ class ApiController < ApplicationController
     params.permit(:event)
   end
   def connected_response(event, conn)
-    {"status"=>"found", "event_id"=>event.id, "conn_id"=>conn.id}
+    other = conn.find_other(event.user.id)
+    {
+      "status"=>"found", "event_id"=>event.id,
+      "conn_id"=>conn.id, "name"=>other.name,
+      "profile"=>other.info
+    }
   end
 end
