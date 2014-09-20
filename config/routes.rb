@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'api/handshake' => 'api#create_event'
   get 'api/poll_event' => 'api#poll_event'
 
+  resource :profile
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
