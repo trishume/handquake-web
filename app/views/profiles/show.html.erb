@@ -9,7 +9,7 @@
 
     <% (@user.info || []).each_with_index do |datum,i| %>
     <div class="key-value contact-info">
-        <div class="col-xs-10 value"><%= datum %></div>
+        <div class="col-xs-10 value"><%= Rinku.auto_link(datum).html_safe %></div>
         <div class="clearfix"></div>
     </div>
     <% end %>
@@ -30,7 +30,7 @@
             </div>
             <% (c_user.info || []).each_with_index do |datum,i| %>
                 <div class="value">
-                    <%= datum %>
+                    <%= Rinku.auto_link(datum).html_safe %>
                     <% if i == 0 %><span class="preferred hidden-xs">Preferred</span><% end %>
                 </div>
             <% end %>
