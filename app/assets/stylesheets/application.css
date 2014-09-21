@@ -16,6 +16,10 @@
  *= stub zikai/name-card
  */
 
+/*#logo {
+  margin-left: -40px;
+}*/
+
 #logo a {
   font-size: 20pt;
   color: #222222;
@@ -24,11 +28,12 @@
 .top-menu {
   font-size: 15pt;
   padding-top: 6px;
+  text-align: right;
 }
 
 .top-menu a {
   color: #428bca;
-  margin-right: 25pt;
+  margin-left: 25pt;
 }
 
 .basic-info {
