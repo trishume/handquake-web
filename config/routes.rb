@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'api/handshake' => 'api#create_event'
   get 'api/poll_event' => 'api#poll_event'
 
+  get 'connector/connect' => 'connector#connect'
+
   resource :profile do
     member do
       get 'new_changes'
