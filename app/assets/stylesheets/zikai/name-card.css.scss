@@ -1,4 +1,4 @@
-/*$height-input-name: 50px;
+$height-input-name: 50px;
 $height-input: 40px;
 $profile-margins: 20px;
 $input-margins: 10px;
@@ -31,7 +31,7 @@ input[type="color"],
     font-size: 16px;
 }
 
-input.input-pebble-id {
+input#input-pebble-id {
     height: $height-input-name;
     line-height: $height-input-name;
     font-size: 24px;
@@ -74,4 +74,4 @@ input.input-pebble-id {
 
 #profile-menu-links {
     margin-top: $profile-margins;
-}*/
+}

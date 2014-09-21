@@ -2,7 +2,7 @@
     <img src="<%= gravatar_path(@user.email) %>" id="profile-pic" width="140" height="140"></img>
 </div>
 <div class="col-md-8" id="contact-info">
-    <a href="#" id="edit-profile">Edit Profile</a>
+    <%= link_to 'Edit Profile', edit_profile_path, :id => 'edit-profile' %>
     <div class="key-value name">
         <%= @user.name %>
     </div>

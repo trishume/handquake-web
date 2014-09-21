@@ -13,4 +13,5 @@
  *= require rails_bootstrap_forms
  *= require_tree .
  *= require_self
+ *= stub zikai/name-card
  */
