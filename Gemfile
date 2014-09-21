@@ -45,3 +45,4 @@ gem 'bootstrap_form'
 
 gem 'thin'
 gem 'google_places'
+gem 'wit_ruby'

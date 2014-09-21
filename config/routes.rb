@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'api/poll_event' => 'api#poll_event'
 
   get 'connector/connect' => 'connector#connect'
+  get 'connector/wit' => 'connector#wit'
 
   resource :profile do
     member do
