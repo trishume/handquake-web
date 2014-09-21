@@ -1,11 +1,17 @@
 var lastConnId = "0";
 
 function pollConnections() {
-  $.getJSON("profile/new_changes", {last_seen: lastConnId}, function( data ) {
-    if(data.status == 'new') {
-      location.reload();
+  $.ajax({
+    dataType: "json",
+    url: "/profile/new_changes",
+    data: {last_seen: lastConnId},
+    headers: {'X-SILENCE-LOGGER':'true'},
+    success: function( data ) {
+      if(data.status == 'new') {
+        location.reload();
+      }
+      setTimeout(pollConnections, 500);
     }
-    setTimeout(pollConnections, 500);
   });
 }
 
