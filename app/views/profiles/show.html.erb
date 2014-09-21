@@ -1,2 +1,40 @@
-<h1>Hi <%= @user.name %></h1>
-<p>This is your profile</p>
+<div class="col-md-4">
+    <img src="<%= gravatar_path(@user.email) %>" id="profile-pic" width="140" height="140"></img>
+</div>
+<div class="col-md-8" id="contact-info">
+    <a href="#" id="edit-profile">Edit Profile</a>
+    <div class="key-value name">
+        <%= @user.name %>
+    </div>
+
+    <% (@user.info || []).each_with_index do |datum,i| %>
+    <div class="key-value contact-info">
+        <div class="col-xs-10 value"><%= datum %></div>
+        <div class="clearfix"></div>
+    </div>
+    <% end %>
+
+</div>
+</div>
+<div class="container">
+<h2 id="recent-met">Recent Connections</h2>
+<div class="contact-grid-list">
+    <% @user.connections.each do |c_user| %>
+    <div class="contact col-md-6">
+        <!-- TESTING BLOCK -->
+        <img src="<%= gravatar_path(c_user.email) %>" class="profile-pic" width="80" height="80"></img>
+        <div class="person-info">
+            <!-- <a href="#" class="see-profile">See Profile</a> -->
+            <div class="name">
+                <%= c_user.name %>
+            </div>
+            <% (c_user.info || []).each_with_index do |datum,i| %>
+                <div class="value">
+                    <%= datum %>
+                    <% if i == 0 %><span class="preferred hidden-xs">Preferred</span><% end %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <% end %>
+</div>
