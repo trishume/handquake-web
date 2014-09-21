@@ -15,3 +15,22 @@
  *= require_self
  *= stub zikai/name-card
  */
+
+#logo a {
+  font-size: 20pt;
+  color: #222222;
+}
+
+.top-menu {
+  font-size: 15pt;
+  padding-top: 8px;
+}
+
+.top-menu a {
+  color: #428bca;
+  margin-right: 25pt;
+}
+
+.basic-info {
+  font-size: 14pt;
+}

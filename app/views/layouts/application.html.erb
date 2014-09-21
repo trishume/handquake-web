@@ -11,11 +11,13 @@
 <body>
   <header>
     <div class="header">
-        <div class="col-md-2">
-          <div id="logo"><a href="/">Handquake</a></div>
+        <div class="col-md-3">
+          <div id="logo"><a href="/">Handquake.me</a></div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6 top-menu">
+          <%= link_to 'Home', '/' %>
           <%= link_to 'Profile', profile_path %>
+          <%= link_to 'Personal Info', edit_profile_path %>
         </div>
         <div class="clearfix"></div>
     </div>
