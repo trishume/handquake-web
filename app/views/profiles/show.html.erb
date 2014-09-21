@@ -40,5 +40,5 @@
 </div>
 
 <script>
-startPolling("<%= Connection.last.id %>");
+startPolling("<%= Connection.last ? Connection.last.id : 0 %>");
 </script>

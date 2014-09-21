@@ -12,6 +12,7 @@ class ProfilesController < ApplicationController
     user = current_user
     p = update_params
     p[:info] = JSON.parse(p[:info]) if p[:info]
+    p[:info].select! {|x| x && !x.empty?}
 
     if user.update(p)
       render json: {"status"=>"ok"}
