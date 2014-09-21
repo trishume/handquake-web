@@ -14,7 +14,7 @@ class HandEvent < ActiveRecord::Base
   end
 
   def find_other
-    HandEvent.where(["(connection_id IS NULL) AND created_at < ? AND created_at > ? AND user_id != ?", created_at, created_at - TIMEOUT, user.id]).last
+    HandEvent.where(["(connection_id IS NULL) AND created_at < ? AND created_at > ? AND user_id != ? AND (dir != ? OR dir IS NULL)", created_at, created_at - TIMEOUT, user.id, dir]).last
   end
 
   def try_connect
