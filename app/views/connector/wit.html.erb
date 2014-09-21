@@ -1,4 +1,4 @@
 <h2>Connected to <%= @name %></h2>
 <img src="<%= gravatar_path(@event.user.email) %>" width="120" height="120">
-<br>
-<%= link_to 'Back to Profile', profile_path %>
+<br><br>
+<%= link_to 'Back to Profile', profile_path, :class => 'btn btn-primary' %>
