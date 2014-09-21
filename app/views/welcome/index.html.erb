@@ -1,12 +1,58 @@
-<h1>Handquake</h1>
-<div class="basic-info">
-<p>Handquake is an app for the Pebble smartwatch that helps you keep track of all the people you meet. Whenever you shake hands with someone, it adds them to your connections and lets you know how to contact them.
-</p>
-<p>If you meet someone that doesn't have the app they can search for you later by the approximate time and place they met you.</p>
-<p>A cool thing by Jim, Tristan, Tony, and Zi Kai</p>
-</div>
-<% if user_signed_in? %>
-<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-<% else %>
-<%= link_to 'Sign In', new_user_session_path %>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="main-header">
+                    <div class="main-header-text">Handquake</div>
+                    <div class="main-header-tagline">Changing the way you wear your watch.</div>
+                    <br>
+                    <form>
+                        <div class="form-group">
+                            <a href="/users/sign_up" class="btn btn-lg btn-primary">Create Profile</a>
+                            <a href="/profile" class="btn btn-lg btn-default">See Dashboard</a>
+                        </div>
+                    </form>
+                    <img src="assets/logo.png" width="468" />
+                </div>
+            </div>
+        </header>
+        <div class="container">
+          <% if notice %><div class="alert alert-info" role="alert"><%= notice %></div><% end %>
+    <% if alert %><div class="alert alert-warning" role="alert"><%= alert %></div><% end %>
+            <div class="col-md-4">
+                <h2>What is it?</h2>
+                <p>Open Handquake at a networking event.</p>
+                <p>Every time you meet someone, the gesture of shaking hands will allow both Handquake users to swap contact information,
+                allowing you to remember who you connected with after the event.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>How does it work?</h2>
+                <p>Hanquake is an app that can be downloaded to your Pebble.
+                It uses Pebble's Accelerometer, GPS, and brand new Compass API to detect the handshake.
+                We also use wit.ai to perform NLP to fill in details of where people met.
+                Our backend is Ruby on Rails and our front end is made with jQuery and Bootstrap.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Who are we?</h2>
+                <p>Our team consists of Zi Kai Chen, Tony Zou, Tristan Hume and Jim Zhang.
+                We are all first year students attending the University of Waterloo. </p>
+                <p>This project was created for Hack the North, Canada's largest international Hackathon Event.</p>
+            </div>
+        </div>
+        <footer>
+            Created By Zi Kai Chen, Tony Zou, Tristan Hume and Jim Zhang. Hack the North 2014.
+            <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+              <% else %>
+              <%= link_to 'Sign In', new_user_session_path %>
+              <% end %>
+        </footer>
+    </body>
+</html>

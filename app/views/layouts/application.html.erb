@@ -12,7 +12,10 @@
   <header>
     <div class="header">
         <div class="col-md-3">
-          <div id="logo"><a href="/">Handquake</a></div>
+          <div id="logo">
+            <img src="/assets/logo-small.png" height="40" style="margin-top:-10px;">
+            <a href="/">Handquake</a>
+          </div>
         </div>
         <div class="col-md-6 top-menu">
           <%= link_to 'Home', '/' %>
@@ -28,5 +31,13 @@
 
     <%= yield %>
   </div>
+  <footer>
+      Created By <a href="http://www.dynotes.com/">Zi Kai Chen</a>, <a href="http://www.tonyzou.com/">Tony Zou</a>, <a href="http://thume.ca/">Tristan Hume</a> and <a href="http://neynt.ca/">Jim Zhang</a>. Hack the North 2014.
+      <% if user_signed_in? %>
+        <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+        <% else %>
+        <%= link_to 'Sign In', new_user_session_path %>
+        <% end %>
+  </footer>
 </body>
 </html>
